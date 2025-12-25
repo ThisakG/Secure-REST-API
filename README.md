@@ -1,47 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Secure REST API — Authentication & Authorization Demo</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 900px;
-            margin: auto;
-            padding: 20px;
-        }
-        h1, h2, h3 {
-            color: #222;
-        }
-        code, pre {
-            background: #f4f4f4;
-            padding: 10px;
-            display: block;
-            overflow-x: auto;
-        }
-        .note {
-            background: #eef6ff;
-            border-left: 4px solid #3b82f6;
-            padding: 10px;
-            margin: 15px 0;
-        }
-        .warning {
-            background: #fff4e5;
-            border-left: 4px solid #f59e0b;
-            padding: 10px;
-            margin: 15px 0;
-        }
-    </style>
-</head>
-<body>
-
-<h1>🔐 Secure REST API (FastAPI)</h1>
+<h1>🔐 Secure REST API with Authentication & Authorization</h1>
 
 <p>
-This project is a minimal but security-focused REST API built using <strong>FastAPI</strong>.
-It demonstrates how <strong>authentication</strong> and <strong>authorization</strong> should be implemented correctly
-in real-world APIs.
+This learning project is a minimal but security-focused REST API built using <strong>FastAPI</strong>.
+It demonstrates how <strong>authentication</strong> and <strong>authorization</strong> should be implemented in real-world APIs.
 </p>
 
 <hr>
@@ -55,10 +16,6 @@ in real-world APIs.
     <li>Post creation tied to a user</li>
     <li>Authorization checks to prevent cross-user access</li>
 </ul>
-
-<p>
-This is intentionally kept simple — no roles, no admin panels, no overengineering.
-</p>
 
 <hr>
 
@@ -191,26 +148,11 @@ Expected response:
 
 <hr>
 
-<h2>📍 Where Security Lives in the Code</h2>
-
-<ul>
-    <li><strong>Password hashing:</strong> <code>security.py</code></li>
-    <li><strong>JWT creation & validation:</strong> <code>security.py</code> + <code>get_current_user</code></li>
-    <li><strong>Authentication enforcement:</strong> FastAPI dependencies</li>
-    <li><strong>Authorization enforcement:</strong> Post ownership checks</li>
-</ul>
-
-<hr>
-
 <h2>🎓 Final Notes</h2>
 
 <p>
 This project is intentionally small but realistic.
-If you can understand and explain this API, you understand the core of secure backend development.
 </p>
-
-<p>
-You could confidently teach this to a junior developer — and explain why
 <strong>authentication ≠ authorization</strong>.
 </p>
 
