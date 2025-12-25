@@ -151,10 +151,6 @@ Expected response:
 <h2>🎓 Final Notes</h2>
 
 <p>
-This project is intentionally small but realistic.
-</p>
-<strong>authentication ≠ authorization</strong>.
+This project is intentionally small but realistic, to understand how APIs and API security operates in real life.
 </p>
 
-</body>
-</html>
