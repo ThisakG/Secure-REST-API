@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Secure REST API with Authentication & Authorization</title>
+    <title>Secure REST API — Authentication & Authorization Demo</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -39,8 +39,9 @@
 <h1>🔐 Secure REST API (FastAPI)</h1>
 
 <p>
-This learning project is a minimal but security-focused REST API built using <strong>FastAPI</strong>.
-It demonstrates how <strong>authentication</strong> and <strong>authorization</strong> should be implemented correctly in real-world APIs.
+This project is a minimal but security-focused REST API built using <strong>FastAPI</strong>.
+It demonstrates how <strong>authentication</strong> and <strong>authorization</strong> should be implemented correctly
+in real-world APIs.
 </p>
 
 <hr>
@@ -56,7 +57,7 @@ It demonstrates how <strong>authentication</strong> and <strong>authorization</s
 </ul>
 
 <p>
-This is intentionally kept simple — no roles, no admin panels, no overengineering; purely to see how API and API security works. 
+This is intentionally kept simple — no roles, no admin panels, no overengineering.
 </p>
 
 <hr>
@@ -187,6 +188,16 @@ Expected response:
 {"detail":"Not authorized to delete this post"}
 </pre>
 
+<hr>
+
+<h2>📍 Where Security Lives in the Code</h2>
+
+<ul>
+    <li><strong>Password hashing:</strong> <code>security.py</code></li>
+    <li><strong>JWT creation & validation:</strong> <code>security.py</code> + <code>get_current_user</code></li>
+    <li><strong>Authentication enforcement:</strong> FastAPI dependencies</li>
+    <li><strong>Authorization enforcement:</strong> Post ownership checks</li>
+</ul>
 
 <hr>
 
@@ -194,7 +205,11 @@ Expected response:
 
 <p>
 This project is intentionally small but realistic.
+If you can understand and explain this API, you understand the core of secure backend development.
 </p>
 
-</body>
-</html>
+<p>
+You could confidently teach this to a junior developer — and explain why
+<strong>authentication ≠ authorization</strong>.
+</p>
+
