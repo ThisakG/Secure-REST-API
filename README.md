@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Secure REST API — Authentication & Authorization Demo</title>
+    <title>Secure REST API with Authentication & Authorization</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -39,9 +39,8 @@
 <h1>🔐 Secure REST API (FastAPI)</h1>
 
 <p>
-This project is a minimal but security-focused REST API built using <strong>FastAPI</strong>.
-It demonstrates how <strong>authentication</strong> and <strong>authorization</strong> should be implemented correctly
-in real-world APIs.
+This learning project is a minimal but security-focused REST API built using <strong>FastAPI</strong>.
+It demonstrates how <strong>authentication</strong> and <strong>authorization</strong> should be implemented correctly in real-world APIs.
 </p>
 
 <hr>
@@ -57,7 +56,7 @@ in real-world APIs.
 </ul>
 
 <p>
-This is intentionally kept simple — no roles, no admin panels, no overengineering.
+This is intentionally kept simple — no roles, no admin panels, no overengineering; purely to see how API and API security works. 
 </p>
 
 <hr>
@@ -89,8 +88,7 @@ which validates the token and resolves the user from the database.
 </p>
 
 <div class="note">
-<strong>Important:</strong> Authentication alone is not enough.  
-An authenticated user can still be malicious.
+<strong>Important:</strong> Authentication alone is not enough, as an authenticated user can still be malicious.
 </div>
 
 <hr>
@@ -117,7 +115,7 @@ if post.owner_id != current_user.id:
 </pre>
 
 <div class="warning">
-This is where most real-world API breaches happen (IDOR / Broken Object Level Authorization).
+This is the stage where most real-world API breaches happen (IDOR / Broken Object Level Authorization).
 </div>
 
 <hr>
@@ -189,16 +187,6 @@ Expected response:
 {"detail":"Not authorized to delete this post"}
 </pre>
 
-<hr>
-
-<h2>📍 Where Security Lives in the Code</h2>
-
-<ul>
-    <li><strong>Password hashing:</strong> <code>security.py</code></li>
-    <li><strong>JWT creation & validation:</strong> <code>security.py</code> + <code>get_current_user</code></li>
-    <li><strong>Authentication enforcement:</strong> FastAPI dependencies</li>
-    <li><strong>Authorization enforcement:</strong> Post ownership checks</li>
-</ul>
 
 <hr>
 
@@ -206,12 +194,6 @@ Expected response:
 
 <p>
 This project is intentionally small but realistic.
-If you can understand and explain this API, you understand the core of secure backend development.
-</p>
-
-<p>
-You could confidently teach this to a junior developer — and explain why
-<strong>authentication ≠ authorization</strong>.
 </p>
 
 </body>
